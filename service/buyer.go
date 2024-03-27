@@ -28,7 +28,7 @@ func (b *buyerManager) Add(ctx context.Context, user models.User) (err error) {
 	return
 }
 
-func (b *buyerManager) Delete(ctx context.Context, userId int32) (deletedUser models.User, err error) {
+func (b *buyerManager) Delete(ctx context.Context, userId int64) (deletedUser models.User, err error) {
 	if userId <= 0 {
 		err = errors.New(models.ErrInvalidArguments)
 		return
